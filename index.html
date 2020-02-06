@@ -14,7 +14,7 @@
         </h2>
       </header>
       <div class="row">
-        <table class="table table-striped table-bordered mx-5">
+        <table class="table table-striped table-bordered mx-5 col-8">
           <thead class="thead-light">
             <tr>
               <th scope="col">Student Name</th>
@@ -40,7 +40,24 @@
             </tr>
           </tbody>
         </table>
-      </div>
+        <form class="col">
+          <div class="input-group mb-3">
+            <i class="fa fa-user input-group-prepend input-group-text d-flex"></i>
+            <input type="text" placeholder="Student Name" class="form-control" name="name" />
+          </div>
+          <div class="input-group mb-3">
+            <i class="fa fa-list-alt input-group-prepend input-group-text font-weight-normal d-flex"></i>
+            <input type="text" placeholder="Student Course" class="form-control" name="course" />
+          </div>
+          <div class="input-group mb-3">
+            <i class="fa fa-graduation-cap input-group-prepend input-group-text d-flex"></i>
+            <input type="text" placeholder="Student Grade" class="form-control" name="grade" />
+          </div>
+          <div class="input-group justify-content-end">
+            <button type="submit" class="btn btn-success mr-3">Add</button>
+            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+          </div>
+        </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="components/grade-table.js"></script>
