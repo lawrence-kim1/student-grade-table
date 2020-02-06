@@ -5,36 +5,46 @@
     <title>Student Grade Table</title>
   </head>
   <body>
-    <header><h1>Student Grade Table</h1></header>
-    <table class="table table-striped table-bordered">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Student Name</th>
-          <th scope="col">Course</th>
-          <th scope="col">Grade</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td scope="row"></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td scope="row"></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td scope="row"></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container-fluid px-5">
+      <header class="row align-items-center mx-5">
+        <h1 class="col">Student Grade Table</h1>
+        <h2 class="col text-right">
+          <div>Average Grade <span class="badge badge-secondary"></span></div>
+        </h2>
+      </header>
+      <div class="row">
+        <table class="table table-striped table-bordered mx-5">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Student Name</th>
+              <th scope="col">Course</th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row"></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row"></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td scope="row"></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <script src="components/app.js"></script>
     <script src="components/grade-table.js"></script>
+    <script src="components/page-header.js"></script>
+    <script src="components/app.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
