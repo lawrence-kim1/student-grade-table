@@ -13,7 +13,8 @@ class App {
   getGrades() {
     $.ajax({
       method: "GET",
-      url: "http://sgt.lfzprototypes.com",
+      headers: {"X-Access-Token": "oRfGzNF2"},
+      url: "http://sgt.lfzprototypes.com/api/grades",
       success: this.handleGetGradesSuccess,
       error: this.handleGetGradesSuccess
     })
