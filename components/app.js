@@ -87,6 +87,6 @@ class App {
     this.getGrades();
     this.gradeForm.onSubmit(this.createGrade);
     this.gradeTable.onDeleteClick(this.deleteGrade);
-    this.gradeTable.onSubmit(this.editGrade);
+    this.gradeTable.onEditClick(this.editGrade);
   }
 }
