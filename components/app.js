@@ -64,9 +64,19 @@ class App {
   handleDeleteGradeSuccess() {
     this.getGrades();
   }
+  editGrade(id) {
+    console.log(id);
+  }
+  handleEditGradeError(error) {
+    console.error(error);
+  }
+  handleEditGradeSuccess() {
+    this.getGrades();
+  }
   start() {
     this.getGrades();
     this.gradeForm.onSubmit(this.createGrade);
-    this.gradeTable.onDeleteClick(this.deleteGrade)
+    this.gradeTable.onDeleteClick(this.deleteGrade);
+    this.gradeTable.onEditClick(this.editGrade);
   }
 }
