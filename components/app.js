@@ -9,8 +9,8 @@ class App {
     this.handleCreateGradeError = this.handleCreateGradeError.bind(this);
     this.handleCreateGradeSuccess = this.handleCreateGradeSuccess.bind(this);
     this.deleteGrade = this.deleteGrade.bind(this);
-    this.handleDeleteGradeError = this.handleDeleteGradeError(this);
-    this.handleDeleteGradeSuccess = this.handleDeleteGradeSuccess(this);
+    this.handleDeleteGradeError = this.handleDeleteGradeError.bind(this);
+    this.handleDeleteGradeSuccess = this.handleDeleteGradeSuccess.bind(this);
   }
   handleGetGradesError(error) {
     console.error(error);
@@ -30,7 +30,7 @@ class App {
       headers: {"X-Access-Token": "oRfGzNF2"},
       url: "http://sgt.lfzprototypes.com/api/grades",
       success: this.handleGetGradesSuccess,
-      error: this.handleGetGradesSuccess
+      error: this.handleGetGradesError
     })
   }
   createGrade(name, course, grade) {
