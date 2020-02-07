@@ -10,9 +10,6 @@ class GradeForm {
   }
   handleSubmit(event) {
     event.preventDefault();
-    if (!event.target.classList.contains('add')) {
-      return;
-    }
     var formData = new FormData(event.target);
     var name = formData.get('name');
     var course = formData.get('course');
