@@ -20,10 +20,7 @@ class GradeTable {
   onDeleteClick(deleteGrade) {
     this.deleteGrade = deleteGrade;
   }
-  onEditClick(editGrade) {
-    this.editGrade = editGrade;
-  }
-  renderGradeRow(data, deleteGrade, editGrade) {
+  renderGradeRow(data, deleteGrade) {
     var tableBody = this.tableElement.querySelector('tbody');
     var row = document.createElement('tr');
     var name = row.appendChild(document.createElement('td'));
@@ -36,9 +33,9 @@ class GradeTable {
     tableDeleteData.classList.add('text-center');
     var tableEdit = tableDeleteData.appendChild(document.createElement('i'));
     tableEdit.classList.add('fa', 'fa-edit', 'text-info', 'mr-3');
-    tableEdit.addEventListener('click', function () {
-      editGrade(data.id);
-    });
+    // tableEdit.addEventListener('click', function () {
+    //   editGrade(data.id);
+    // });
     var tableDelete = tableDeleteData.appendChild(document.createElement('i'));
     tableDelete.classList.add('fa', 'fa-trash', 'text-danger', 'ml-3');
     tableDelete.addEventListener('click', function () {
