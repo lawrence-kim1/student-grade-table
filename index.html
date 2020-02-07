@@ -6,44 +6,14 @@
     <title>Student Grade Table</title>
   </head>
   <body>
-    <div class="container-fluid px-5">
-      <header class="row align-items-center mx-5">
-        <h1 class="col">Student Grade Table</h1>
-        <h2 class="col text-right">
+    <div class="container-sm">
+      <header class="row align-items-center">
+        <h1 class="col-12 col-lg-6 text-center text-lg-left">Student Grade Table</h1>
+        <h2 class="col-12 col-lg-6 text-center text-lg-right">
           <div>Average Grade <span class="badge badge-secondary"></span></div>
         </h2>
       </header>
-      <div class="row">
-        <div class="col-8">
-          <table class="table table-striped table-bordered">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Student Name</th>
-                <th scope="col">Course</th>
-                <th scope="col">Grade</th>
-                <th scope="col">Operations</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="d-none">No Grades Recorded</p>
-        </div>
+      <div class="flex-row-reverse row">
         <form class="col">
           <div class="input-group mb-3">
             <i class="fa fa-user input-group-prepend input-group-text d-flex"></i>
@@ -57,11 +27,26 @@
             <i class="fa fa-graduation-cap input-group-prepend input-group-text d-flex"></i>
             <input type="text" placeholder="Student Grade" class="form-control" name="grade" />
           </div>
-          <div class="input-group justify-content-end">
+          <div class="input-group justify-content-end mb-5">
             <button type="submit" class="btn btn-success mr-3">Add</button>
             <button type="reset" class="btn btn-outline-secondary">Cancel</button>
           </div>
         </form>
+        <div class="col-12 col-lg-8">
+          <table class="table table-striped table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Operations</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <p class="d-none">No Grades Recorded</p>
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
