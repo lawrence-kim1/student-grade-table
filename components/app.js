@@ -1,4 +1,14 @@
 class App {
+  constructor(gradeTable, pageHeader, gradeForm) {
+    this.handleGetGradesError = this.handleGetGradesError.bind(this);
+    this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
+    this.gradeTable = gradeTable;
+    this.pageHeader = pageHeader;
+    this.gradeForm = gradeForm;
+    this.createGrade = this.createGrade.bind(this);
+    this.handleCreateGradeError = this.handleCreateGradeError.bind(this);
+    this.handleCreateGradeSuccess = this.handleCreateGradeSuccess.bind(this);
+  }
   handleGetGradesError(error) {
     console.error(error);
   }
@@ -10,16 +20,6 @@ class App {
     }
     gradeAverage = gradeAverage / grades.length;
     this.pageHeader.updateAverage(gradeAverage);
-  }
-  constructor(gradeTable, pageHeader, gradeForm) {
-    this.handleGetGradesError = this.handleGetGradesError.bind(this);
-    this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
-    this.gradeTable = gradeTable;
-    this.pageHeader = pageHeader;
-    this.gradeForm = gradeForm;
-    this.createGrade = this.createGrade.bind(this);
-    this.handleCreateGradeError = this.handleCreateGradeError.bind(this);
-    this.handleCreateGradeSuccess = this.handleCreateGradeSuccess.bind(this);
   }
   getGrades() {
     $.ajax({
@@ -44,6 +44,15 @@ class App {
     console.error(error);
   }
   handleCreateGradeSuccess() {
+    this.getGrades();
+  }
+  deleteGrade(id) {
+    console.log(id);
+  }
+  handleDeleteGradeError(error) {
+    console.error(error);
+  }
+  handleDeleteGradeSuccess() {
     this.getGrades();
   }
   start() {
