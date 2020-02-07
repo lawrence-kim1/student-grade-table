@@ -37,7 +37,7 @@ class GradeTable {
     var tableEdit = tableDeleteData.appendChild(document.createElement('i'));
     tableEdit.classList.add('fa', 'fa-edit', 'text-info', 'mr-3');
     tableEdit.addEventListener('click', function () {
-      editField(data.id);
+      editField(data.id, name, course, grade);
     });
     var tableDelete = tableDeleteData.appendChild(document.createElement('i'));
     tableDelete.classList.add('fa', 'fa-trash', 'text-danger', 'ml-3');

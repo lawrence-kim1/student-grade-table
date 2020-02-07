@@ -67,8 +67,13 @@ class App {
   handleDeleteGradeSuccess() {
     this.getGrades();
   }
-  editField(id) {
+  editField(id, name, course, grade) {
     console.log(id);
+    document.querySelector('h3').textContent = 'Update Grade';
+    document.getElementById('name').value = name.textContent;
+    document.getElementById('course').value = course.textContent;
+    document.getElementById('grade').value =grade.textContent;
+    document.querySelector('button').textContent = 'Update';
   }
   editGrade(id, name, course, grade) {
     $.ajax({
