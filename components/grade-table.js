@@ -19,6 +19,9 @@ class GradeTable {
   onDeleteClick(deleteGrade) {
     this.deleteGrade = deleteGrade;
   }
+  onEditClick(editGrade) {
+    this.editGrade = editGrade;
+  }
   renderGradeRow(data, deleteGrade) {
     var tableBody = this.tableElement.querySelector('tbody');
     var row = document.createElement('tr');
