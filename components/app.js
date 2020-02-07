@@ -64,8 +64,15 @@ class App {
   handleDeleteGradeSuccess() {
     this.getGrades();
   }
-  editGrade(id) {
-    console.log(id);
+  editGrade(id, name, course, grade) {
+    $.ajax({
+      method: "PATCH",
+      headers: {"X-Access-Token": "oRfGzNF2"},
+      data: {"name": name, "course": course, "grade": grade},
+      url: "http://sgt.lfzprototypes.com/api/grades/" + id,
+      success: this.handleEditGradeSuccess,
+      error: this.handleEditGradeError
+    });
   }
   handleEditGradeError(error) {
     console.error(error);
@@ -77,6 +84,6 @@ class App {
     this.getGrades();
     this.gradeForm.onSubmit(this.createGrade);
     this.gradeTable.onDeleteClick(this.deleteGrade);
-    this.gradeTable.onEditClick(this.editGrade);
+    this.gradeTable.onSubmit(this.editGrade);
   }
 }
