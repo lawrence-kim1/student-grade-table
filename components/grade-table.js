@@ -16,4 +16,7 @@ class GradeTable {
       tableBody.append(row);
     }
   }
+  onDeleteClick(deleteGrade) {
+    this.deleteGrade = deleteGrade;
+  }
 }
