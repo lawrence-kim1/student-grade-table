@@ -67,6 +67,9 @@ class App {
   handleDeleteGradeSuccess() {
     this.getGrades();
   }
+  editField(id) {
+    console.log(id);
+  }
   editGrade(id, name, course, grade) {
     $.ajax({
       method: "PATCH",
@@ -87,6 +90,7 @@ class App {
     this.getGrades();
     this.gradeForm.onSubmit(this.createGrade);
     this.gradeTable.onDeleteClick(this.deleteGrade);
+    this.gradeTable.onEditClick(this.editField);
     this.gradeForm.onEditSubmit(this.editGrade);
   }
 }

@@ -29,12 +29,12 @@ class GradeForm {
   }
   handleEdit(event) {
     event.preventDefault();
-    var name = document.getElementById('name');
-    name.textContent = name.parentElement.parentElement.firstElementChild.textContent;
-    var course = document.getElementById('course');
-    course.textContent = course.parentElement.parentElement.firstElementChild.nextElementSibling.textContent;
-    var grade = document.getElementById('grade');
-    grade.textContent = grade.parentElement.parentElement.firstElementChild.nextElementSibling.nextElementSibling.textContent;
-    this.editGrade(name, course, grade);
+    // var name = document.getElementById('name');
+    // name.textContent = name.parentElement.parentElement.firstElementChild.textContent;
+    // var course = document.getElementById('course');
+    // course.textContent = course.parentElement.parentElement.firstElementChild.nextElementSibling.textContent;
+    // var grade = document.getElementById('grade');
+    // grade.textContent = grade.parentElement.parentElement.firstElementChild.nextElementSibling.nextElementSibling.textContent;
+    // this.editGrade(name, course, grade);
   }
 }
