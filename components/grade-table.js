@@ -28,13 +28,11 @@ class GradeTable {
     course.textContent = data.course;
     var grade = row.appendChild(document.createElement('td'));
     grade.textContent = data.grade;
-    var tableButtonData = row.appendChild(document.createElement('td'));
-    var tableButton = tableButtonData.appendChild(document.createElement('button'));
-    tableButton.textContent = 'DELETE';
-    tableButton.classList.add('btn');
-    tableButton.classList.add('btn-danger');
+    var tableDeleteData = row.appendChild(document.createElement('td'));
+    var tableDelete = tableDeleteData.appendChild(document.createElement('i'));
+    tableDelete.classList.add('fa', 'fa-trash');
     tableBody.append(row);
-    tableButton.addEventListener('click', function () {
+    tableDelete.addEventListener('click', function () {
       deleteGrade(data.id);
     });
   }
