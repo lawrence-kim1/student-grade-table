@@ -1,7 +1,7 @@
 class GradeTable {
   constructor(tableElement, noGradesElement) {
     this.tableElement = tableElement;
-    this.noGradeElement = noGradesElement;
+    this.noGradesElement = noGradesElement;
     this.deleteGrade = null;
     this.editField = null;
   }
@@ -12,9 +12,9 @@ class GradeTable {
       this.renderGradeRow(grades[i], this.deleteGrade, this.editField);
     }
     if (grades.length === 0) {
-      document.querySelector('p').classList.remove('d-none');
+      this.noGradesElement.classList.remove('d-none');
     } else {
-      document.querySelector('p').classList.add('d-none');
+      this.noGradesElement.classList.add('d-none');
     }
   }
   onDeleteClick(deleteGrade) {

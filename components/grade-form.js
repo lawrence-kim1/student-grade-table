@@ -17,6 +17,9 @@ class GradeForm {
     var name = formData.get('name');
     var course = formData.get('course');
     var grade = formData.get('grade');
+    if (!event.target.classList.contains('add')) {
+      return;
+    }
     if (grade >= 0) {
       this.createGrade(name, course, grade);
       event.target.reset();
@@ -29,12 +32,21 @@ class GradeForm {
   }
   handleEdit(event) {
     event.preventDefault();
-    // var name = document.getElementById('name');
-    // name.textContent = name.parentElement.parentElement.firstElementChild.textContent;
-    // var course = document.getElementById('course');
-    // course.textContent = course.parentElement.parentElement.firstElementChild.nextElementSibling.textContent;
-    // var grade = document.getElementById('grade');
-    // grade.textContent = grade.parentElement.parentElement.firstElementChild.nextElementSibling.nextElementSibling.textContent;
-    // this.editGrade(name, course, grade);
+    if (event.target.classList.contains('add')) {
+      return;
+    }
+    var formData = new FormData(event.target);
+    var name = formData.get('name');
+    var course = formData.get('course');
+    var grade = formData.get('grade');
+    if (grade >= 0) {
+      this.editGrade(name, course, grade);
+      event.target.reset();
+      document.querySelector('h3').textContent = 'Add Grade';
+      document.querySelector('button').textContent = 'Add';
+      document.querySelector('form').classList.add('add');
+    } else {
+      return;
+    }
   }
 }

@@ -68,12 +68,12 @@ class App {
     this.getGrades();
   }
   editField(id, name, course, grade) {
-    console.log(id);
     document.querySelector('h3').textContent = 'Update Grade';
     document.getElementById('name').value = name.textContent;
     document.getElementById('course').value = course.textContent;
     document.getElementById('grade').value =grade.textContent;
     document.querySelector('button').textContent = 'Update';
+    document.querySelector('form').classList.remove('add');
   }
   editGrade(id, name, course, grade) {
     $.ajax({
