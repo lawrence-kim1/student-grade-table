@@ -13,7 +13,7 @@ class App {
     this.handleDeleteGradeSuccess = this.handleDeleteGradeSuccess.bind(this);
     this.editGrade = this.editGrade.bind(this);
     this.handleEditGradeError = this.handleEditGradeError.bind(this);
-    this.handleEditGradeSuccess = this.handleEditGradeError.bind(this);
+    this.handleEditGradeSuccess = this.handleEditGradeSuccess.bind(this);
   }
   handleGetGradesError(error) {
     console.error(error);
@@ -77,11 +77,12 @@ class App {
     document.querySelector('form').classList.remove('add');
   }
   editGrade(id, name, course, grade) {
+    console.log(id)
     $.ajax({
       method: "PATCH",
       headers: {"X-Access-Token": "oRfGzNF2"},
-      data: {"name": name, "course": course, "grade": grade},
       url: "http://sgt.lfzprototypes.com/api/grades/" + id,
+      data: {name, course, grade},
       success: this.handleEditGradeSuccess,
       error: this.handleEditGradeError
     });
