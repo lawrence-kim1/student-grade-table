@@ -7,25 +7,26 @@
   </head>
   <body>
     <div class="container-sm">
-      <header class="row align-items-center">
+      <header class="row align-items-center my-4">
         <h1 class="col-12 col-lg-6 text-center text-lg-left">Student Grade Table</h1>
         <h2 class="col-12 col-lg-6 text-center text-lg-right">
           <div>Average Grade <span class="badge badge-secondary"></span></div>
         </h2>
       </header>
       <div class="flex-row-reverse row">
-        <form class="col">
+        <form class="col add">
+          <h3 class="mb-3">Add Grade</h3>
           <div class="input-group mb-3">
             <i class="fa fa-user input-group-prepend input-group-text d-flex"></i>
-            <input type="text" placeholder="Student Name" class="form-control" name="name" />
+            <input type="text" placeholder="Student Name" class="form-control" name="name" id="name" />
           </div>
           <div class="input-group mb-3">
             <i class="fa fa-list-alt input-group-prepend input-group-text font-weight-normal d-flex"></i>
-            <input type="text" placeholder="Student Course" class="form-control" name="course" />
+            <input type="text" placeholder="Student Course" class="form-control" name="course" id="course" />
           </div>
           <div class="input-group mb-3">
             <i class="fa fa-graduation-cap input-group-prepend input-group-text d-flex"></i>
-            <input type="text" placeholder="Student Grade" class="form-control" name="grade" />
+            <input type="number" placeholder="Student Grade" class="form-control" name="grade" id="grade" />
           </div>
           <div class="input-group justify-content-end mb-5">
             <button type="submit" class="btn btn-success mr-3">Add</button>
