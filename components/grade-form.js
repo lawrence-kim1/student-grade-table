@@ -36,11 +36,12 @@ class GradeForm {
       return;
     }
     var formData = new FormData(event.target);
+    var id = document.querySelector('button').getAttribute('data-id');
     var name = formData.get('name');
     var course = formData.get('course');
     var grade = formData.get('grade');
     if (grade >= 0) {
-      this.editGrade(name, course, grade);
+      this.editGrade(id, name, course, grade);
       event.target.reset();
       document.querySelector('h3').textContent = 'Add Grade';
       document.querySelector('button').textContent = 'Add';

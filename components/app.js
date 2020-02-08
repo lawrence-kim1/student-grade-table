@@ -73,6 +73,7 @@ class App {
     document.getElementById('course').value = course.textContent;
     document.getElementById('grade').value =grade.textContent;
     document.querySelector('button').textContent = 'Update';
+    document.querySelector('button').setAttribute('data-id', id);
     document.querySelector('form').classList.remove('add');
   }
   editGrade(id, name, course, grade) {
